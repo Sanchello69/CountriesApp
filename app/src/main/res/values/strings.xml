@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CountriesApp</string>
+    <string name="name">Name: </string>
+    <string name="region">Region: </string>
+    <string name="capital">Capital: </string>
+    <string name="currencies">Currencies: </string>
+    <string name="timezones">Timezones: </string>
+</resources>
