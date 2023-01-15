@@ -1,70 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.detailsCountry.DetailsFragment">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/nameTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:text="@string/name"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/regionTextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/regionTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/region"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/capitalTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameTextView"
         app:layout_constraintStart_toStartOf="@+id/nameTextView"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
 
     <TextView
         android:id="@+id/capitalTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/capital"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/currenciesTextView"
+        app:layout_constraintEnd_toEndOf="@+id/regionTextView"
         app:layout_constraintStart_toStartOf="@+id/regionTextView"
         app:layout_constraintTop_toBottomOf="@+id/regionTextView" />
 
     <TextView
         android:id="@+id/currenciesTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/currencies"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/timezonesTextView"
+        app:layout_constraintEnd_toEndOf="@+id/capitalTextView"
         app:layout_constraintStart_toStartOf="@+id/capitalTextView"
         app:layout_constraintTop_toBottomOf="@+id/capitalTextView" />
 
     <TextView
         android:id="@+id/timezonesTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/timezones"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/currenciesTextView"
         app:layout_constraintStart_toStartOf="@+id/currenciesTextView"
         app:layout_constraintTop_toBottomOf="@+id/currenciesTextView" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="200dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         app:strokeWidth="1dp"
         app:strokeColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
             android:id="@+id/flagCountry"
@@ -83,5 +90,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
